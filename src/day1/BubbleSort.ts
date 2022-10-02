@@ -6,7 +6,7 @@ export default function bubble_sort(arr: number[]): void {
 	do {
 		swapped = false;
 		for (let i = 0; i < arr.length - 1; i++) {
-			// when an adjacent element is in wrong order swap
+			// if an adjacent element is in wrong order swap
 			if (arr[i] > arr[i + 1]) {
 				let temp = arr[i];
 				arr[i] = arr[i + 1];
@@ -17,4 +17,6 @@ export default function bubble_sort(arr: number[]): void {
 	} while (swapped)
 
 }
+
+
 
