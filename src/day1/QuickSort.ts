@@ -1,7 +1,8 @@
-/* In QuickSort you choose a  pivot element. You put everything smaller than the pivot element into a 'left' 
-and everything that's greater than the pivot into a 'right.
+/* In QuickSort you choose a  pivot element. You put everything smaller than 
+the pivot element into a 'left' and everything that's greater than the pivot into a 'right.
 
-Repeat  the process for the individual 'left and right arrays till you have an arrays till you have an array of length 1
+Repeat  the process for the individual 'left and right arrays till 
+you have an arrays till you have an array of length 1
 
 Repeatedly concatenate the left array , pivot and right array till one array remains
 
@@ -10,7 +11,7 @@ Repeatedly concatenate the left array , pivot and right array till one array rem
 
 export default function quick_sort(arr: number[]): number[] {
 
-	//  We us r this to stop the function to stop running recursively 
+	//  We use this to stop the function to stop running recursively 
 	// after the array length is less than two.
 	if (arr.length < 2) {
 		return arr;
