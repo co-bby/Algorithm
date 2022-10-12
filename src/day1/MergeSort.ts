@@ -1,9 +1,14 @@
+/*The Merge Sort algorithm is a sorting algorithm that based on the Divide and Conquer paradigm. 
+In this algorithm, the array is initially divided into two equal halves 
+and then they are combined in a sorted manner. */
+
 export default function mergeSort(arr: number[]): number[] {
+	// if the arrray becomes one the dividing will stop
 	if (arr.length < 2) {
 		return arr;
 	}
 
-	// The niddle index of the array
+	// The middle index of the array
 	let mid = Math.floor(arr.length / 2)
 
 	// the first half of the array
