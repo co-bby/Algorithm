@@ -2,5 +2,7 @@ node_modules
 ./ligma.config.js
 dist
 stats.json
+.fleet
+
 
 
