@@ -17,6 +17,9 @@ export default class Queue<T> {
     public head?: Node<T>;
     private tail?: Node<T>;
 
+
+
+
     constructor() {
         this.head = this.tail = undefined;
         this.length = 0;
@@ -25,13 +28,14 @@ export default class Queue<T> {
     // adds elements to the rear/tail of the collection.
     enqueue(item: T): void {
         const node = { value: item } as Node<T>;
-        this.length++
+        this.length++;
         if (!this.tail) {
-            this.tail = this.head = node;
+            this.tail = this.head = node
             return;
         }
         this.tail.next = node;
         this.tail = node;
+
 
     }
     //remove elements to the front/head of the collection
@@ -40,7 +44,7 @@ export default class Queue<T> {
             return undefined;
         }
         this.length--;
-        let head = this.head;
+        const head = this.head;
         this.head = this.head.next;
         return head.value;
     }
