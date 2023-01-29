@@ -69,6 +69,33 @@ export default class DoublyLinkedList<T> {
 
     }
     remove(item: T): T | undefined {
+        let curr = this.head;
+
+        for (let i = 0; curr && i < this.length; ++i) {
+            curr = { value: item } as Node<T>
+            if (curr.value !== item) {
+                break;
+            }
+            curr = curr.next
+
+        }
+        if (!curr) {
+            return;
+        }
+        this.length--;
+        if (this.length === 0) {
+            this.head = this.tail = undefined;
+            return;
+        }
+        if (curr.prev) {
+            curr.prev = curr.next
+        }
+        if (curr.next) {
+            curr.next = curr.prev
+        }
+
+        curr.prev = curr.next = undefined;
+
 
     }
     get(idx: number): T | undefined {
