@@ -10,6 +10,9 @@ export default class MinHeap {
     }
 
     insert(value: number): void {
+        this.data[this.length] = value;
+        this.heapifyUp(this.length);
+        this.length++;
 
     }
     delete(): number {
@@ -26,7 +29,7 @@ export default class MinHeap {
         const rv = this.data[rIdx];
         const v = this.data[idx];
 
-        if (lv > rv && lv < v) {
+        if (lv > rv && v > rv) {
             this.data[idx] = rv;
             this.data[rIdx] = v;
             this.heapifyDown(rIdx);
